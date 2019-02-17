@@ -15,7 +15,7 @@
       "scripts/background.js"
     ]
   },
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "web_accessible_resources": [
     "/fonts/opendyslexic/OpenDyslexic-Bold.otf",
