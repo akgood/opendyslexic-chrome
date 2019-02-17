@@ -7,24 +7,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   context: __dirname + '/app/',
   entry: {
-
-    'bundle.min.css': [
-      '../node_modules/vue-material/dist/vue-material.min.css',
-      '../node_modules/vue-material/dist/theme/default.css',
-      '../node_modules/material-icons/iconfont/material-icons.css',
-      '../app/styles/app.css',
-    ],
     'background.js': './scripts.babel/background.js',
-    'popup.js': './scripts.babel/popup.js',
   },
   output: {
     path: path.resolve(__dirname, '/dist/help'),
     filename: '[name]'
   },
   resolve: {
-    alias: {
-      'vue': 'vue/dist/vue.esm.js'
-    }
   },
   module: {
     rules: [{
@@ -33,9 +22,6 @@ module.exports = {
         use: [{
           loader: 'babel-loader'
         }]
-      }, {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       },
         {
           test: /\.css$/,
